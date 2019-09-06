@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Topaz ACP Style v1.0 &raquo; Readme</title>
+	<link rel="icon" type="image/png" href="favicon.ico" />
+	<style type="text/css" media="screen">
+/** Default Style **/
+         
+
+.alert {
+	background: #FFF6BF;
+	border-top: 1px solid #FFD324;
+	border-left: 1px solid #FFD324;
+	border-right: 1px solid #FFD324;
+	border-bottom: 1px solid #FFD324;
+	text-align: left;
+	margin: 10px auto;
+	padding: 5px 20px;
+	/*font-weight: bold;*/
+	border-radius: 6px;
+	color: #404040;
+}
+.notice1 {
+	background: #D6ECA6;
+	border-top: 1px solid #8DC93E;
+	border-left: 1px solid #8DC93E;
+	border-right: 1px solid #8DC93E;
+	border-bottom: 1px solid #8DC93E;
+	text-align: left;
+	margin: 10px auto;
+	padding: 5px 20px;
+	/*font-weight: bold;*/
+	border-radius: 6px;
+	color: #404040;
+}
+.notice2 {
+	background: #ADCBE7;
+	border-top: 1px solid #0F5C8E;
+	border-left: 1px solid #0F5C8E;
+	border-right: 1px solid #0F5C8E;
+	border-bottom: 1px solid #0F5C8E;
+	text-align: left;
+	margin: 10px auto;
+	padding: 5px 20px;
+	/*font-weight: bold;*/
+	border-radius: 6px;
+	color: #404040;
+}
+body {
+	font-family: Verdana, Arial;
+	font-size: 12px;
+	color: #404040;
+	background: #FFFFFF;
+}
+p {
+	padding-left: 10px;
+}
+blockquote {
+	margin: 10px 20px 0px 20px;
+	padding: 10px;
+	border: 1px solid #8d8d8d;
+	background-color: #f5f5f5;
+}
+li {
+	margin-top: 20px;
+}
+ul li ul li {
+	margin-top: 10px;
+}
+a, a:active, a:link, a:visited {
+	color: #0079C7;
+	text-decoration: none;
+}
+a:hover {
+	color: #FF7500;
+	text-decoration: underline;
+}
+/** Place Holder Style **/
+
+#Container {
+	width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#Content {
+	background-color: #F5F5F5;
+	border: 1px solid #BBBBBB;
+	padding: 10px;
+	margin-top: -13px;
+	border-radius: 6px;
+}
+/** Title Style **/
+
+#Title {
+	font-family: Verdana, Arial;
+	font-size: 22px;
+	font-weight: bold;
+	color: #027DCC;
+	border-bottom: 1px solid #BBBBBB;
+	margin-bottom: 10px;
+}
+.SubTitle {
+	font-family: Verdana, Arial;
+	font-size: 18px;
+	font-weight: bold;
+	color: #0079C7;
+}
+.SubSubTitle {
+	font-family: Verdana, Arial;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF7500;
+}
+/** Tabs **/
+
+ul#Tabs {
+	font-family: Verdana, Arial;
+	font-size: 12px;
+	font-weight: bold;
+	list-style-type: none;
+	padding-bottom: 28px;
+	padding-right: 25px;
+	border-bottom: 1px solid #bbbbbb;
+	margin-bottom: 12px;
+	z-index: 1;
+	margin-left: 6px;
+	margin-right: 6px;
+}
+#Tabs li.Tab {
+	float: right;
+	height: 25px;
+	background-color: #deedfb;
+	margin: 2px 0px 0px 5px;
+	border: 1px solid #bbbbbb;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+#Tabs li.Tab a {
+	float: left;
+	display: block;
+	color: #666666;
+	text-decoration: none;
+	padding: 5px;
+}
+#Tabs li.Tab a:hover {
+	background-color: #F5F5F5;
+	border-bottom: 0px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+/** Selected Tab **/
+
+#Tabs li.SelectedTab {
+	float: right;
+	height: 25px;
+	background-color: #F5F5F5;
+	margin: 2px 0px 0px 5px;
+	border-top: 1px solid #BBBBBB;
+	border-right: 1px solid #BBBBBB;
+	border-bottom: 1px solid #F5F5F5;
+	border-left: 1px solid #BBBBBB;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+#Tabs li.SelectedTab a {
+	float: left;
+	display: block;
+	color: #666666;
+	text-decoration: none;
+	padding: 5px;
+	cursor: default;
+}
+/** Copyright **/
+
+#Copyright {
+	text-align: left;
+	color: #888888;
+	font-weight: bold;
+}
+</style>
+	<script type="text/javascript">
+	/* <![CDATA[ */
+		// About Page
+		function about() {
+			// Tab
+			document.getElementById('AboutTab').className = 'SelectedTab';
+			document.getElementById('ChangelogTab').className = 'Tab';
+			document.getElementById('InstallTab').className = 'Tab';
+			document.getElementById('LicenseTab').className = 'Tab';
+			// Page
+			document.getElementById('About').style.display= 'block';
+			document.getElementById('Changelog').style.display = 'none';
+			document.getElementById('Install').style.display = 'none';
+			document.getElementById('License').style.display = 'none';
+		}
+		// Changelog Page
+		function changelog() {
+			// Tab
+			document.getElementById('AboutTab').className = 'Tab';
+			document.getElementById('ChangelogTab').className = 'SelectedTab';
+			document.getElementById('InstallTab').className = 'Tab';
+			document.getElementById('LicenseTab').className = 'Tab';
+			// Page
+			document.getElementById('About').style.display = 'none';
+			document.getElementById('Changelog').style.display = 'block';
+			document.getElementById('Install').style.display = 'none';
+			document.getElementById('License').style.display = 'none';
+		}
+		// Installation Page
+		function install() {
+			// Tab
+			document.getElementById('AboutTab').className = 'Tab';
+			document.getElementById('ChangelogTab').className = 'Tab';
+			document.getElementById('InstallTab').className = 'SelectedTab';
+			document.getElementById('LicenseTab').className = 'Tab';
+			// Page
+			document.getElementById('About').style.display= 'none';
+			document.getElementById('Changelog').style.display = 'none';
+			document.getElementById('Install').style.display = 'block';
+			document.getElementById('License').style.display = 'none';
+		
+		}
+		// License Page
+		function license() {
+			// Tab
+			document.getElementById('AboutTab').className = 'Tab';
+			document.getElementById('ChangelogTab').className = 'Tab';
+			document.getElementById('InstallTab').className = 'Tab';
+			document.getElementById('LicenseTab').className = 'SelectedTab';
+			// Page
+			document.getElementById('About').style.display= 'none';
+			document.getElementById('Changelog').style.display = 'none';
+			document.getElementById('Install').style.display = 'none';
+			document.getElementById('License').style.display = 'block';
+		}
+	/* ]]> */
+	</script>
+	</head>
+	<body>
+<div id="Container">
+<!-- Begin Title -->
+<div id="Title">Topaz ACP Style v1.0:&nbsp;&nbsp;<span style="color: #404040;">Readme</span></div>
+<!-- End Title --> 
+<!-- begin: alerts -->
+
+<p class="alert"><strong>Latest MyBB Release:</strong> <a href="http://blog.mybb.com/2015/05/27/mybb-1-8-5-1-6-17-merge-system-1-8-5-release/" target="_blank">MyBB 1.8.5, 1.6.17 &amp; Merge System 1.8.5 Release</a> <span class="date">(May 27, 2015)</span></p>
+<p class="notice1"><strong>Latest news from the MyBB Blog:</strong> <a href="http://blog.mybb.com/2015/05/13/mybb-1-6-end-of-life-announcement/" target="_blank">MyBB 1.6 End of Life Announcement</a> <span class="date">(May 13, 2015)</span></p>
+<p class="notice2"><strong>Are you on the </strong><a href="http://community.mybb.com/" target="_blank">MyBB Community Forums</a><strong>&nbsp;?</strong> - Sign up for notification of new MyBB releases and updates.</p>
+<!-- end: alerts --> 
+<br />
+<!-- Begin Tabs -->
+<ul id="Tabs">
+      <li id="LicenseTab" class="Tab"><a href="#License" onclick="license(); return false;" title="License">License</a></li>
+      <li id="InstallTab" class="Tab"><a href="#Installation" onclick="install(); return false;" title="Installation Instructions">Installation</a></li>
+      <li id="ChangelogTab" class="Tab"><a href="#Changelog" onclick="changelog(); return false;" title="Changelog">Changelog</a></li>
+      <li id="AboutTab" class="SelectedTab"><a href="#About" onclick="about(); return false;" title="About">About</a></li>
+    </ul>
+<!-- End Tabs --> 
+<!-- Begin Content -->
+<div id="Content"> 
+      <!-- Begin  About Theme-->
+      <div id="About">
+    <div class="SubTitle">Topaz ACP Style v1.0</div>
+    <div class="SubSubTitle">&raquo;&nbsp;About:</div>
+    <br />
+    <center>
+          <a href="ACP_Style_Screen.png" ><img src="ACP_Style_Screen_sm.png" border="0"/></a>
+          <p>This a simple ACP Style for MyBB enthusiasts.</p>
+          <p>You can find out more about the MyBB software by visiting: <a href="http://www.mybb.com" target="_blank"><b>MyBB</b></a></p>
+        </center>
+    <br />
+  </div>
+      <!-- End  About Theme--> 
+      <!-- Begin Theme Changelog -->
+      <div id="Changelog" style="display: none;">
+    <div class="SubTitle">Topaz ACP Style v1.0</div>
+    <div class="SubSubTitle">&raquo;&nbsp;Changelog:</div>
+    <br />
+    <p>History:</p>
+    <p>06/04/2015&nbsp;&mdash;&nbsp;ACP Style initial release</p>
+    <p>06/04/2015&nbsp;&mdash;&nbsp;Updated ACP Style initial Basic ReadMe</p>
+    <p>06/04/2015&nbsp;&mdash;&nbsp;ACP Style initial creation completion</p>
+    <br />
+    <p>To Do:&#42;</p>
+    <p>&#42;&nbsp;Add more descriptive commenting</p>
+    <p>&#42;&nbsp;Improve ACP Style ReadMe Documentation</p>
+    <p>&#42;&nbsp;Improve Main Logo &amp; Login Logo</p>
+    <p>&#42;&nbsp;Clean up any minor styling issues</p>
+    <br />
+  </div>
+      <!-- End Theme Changelog --> 
+      
+      <!-- Begin Theme Installation Instructions -->
+      <div id="Install" style="display: none;">
+    <div class="SubTitle">Topaz ACP Style v1.0</div>
+    <div class="SubSubTitle">&raquo;&nbsp;Installation:</div>
+    <br />
+    <p>1.) After downloading the ACP Style, unpack it (with <a href="http://www.7-zip.org/download.html"><b>7-Zip</b></a> for example)</p>
+    <p>2.) Upload contents of &quot;Upload&quot; into your forums folder.</p>
+    <p>3.) Go to the Admin Control Panel under Preferences &gt; Global Preferences &gt; Admin Control Panel Theme</p>
+    <p>4.) Select &quot;Topaz-ACP&quot; &amp; then press: &quot;Save Personal Notes &amp; Preferences&quot;</p>
+    <p>5.) Now have fun with your new forum ACP Syle!</p>
+    <br />
+  </div>
+      <!-- End Theme Installation Instructions --> 
+      
+      <!-- Begin Theme License -->
+      <div id="License" style="display: none;">
+    <div class="SubTitle">Topaz ACP Style v1.0</div>
+    <div class="SubSubTitle">&raquo;&nbsp;License:</div>
+    <br />
+    <p> You may not remove or change the MyBB copyright nor the Designed by: &quot;Vintagedaddyo&quot; statements in the footer of this ACP Style's templates. You may use and modify this ACP Style to your personal likings, but redistributing a modified version for download is prohibited, unless you have explicit written permission from &quot;Vintagedaddyo&quot;, though you are allowed to redistribute a copy that has not been modified. </p>
+  </div>
+      <!-- End Theme License --> 
+    </div>
+<!-- End Content --> 
+
+<!-- Begin Theme Copyright -->
+<p id="Copyright"> ReadME&nbsp;&copy;&nbsp;2015&nbsp;by:&nbsp;<a href="http://vintagedaddyo.com/mybb/community" target="_blank"><b>Vintagedaddyo.</b></a>&nbsp;All Rights Reserved. <br />
+      MyBB&nbsp;&copy; 2015&nbsp;by:&nbsp;<a href="http://mybb.com/" target="_blank"><b>MyBB Group.</b></a>&nbsp;All Rights Reserved. <br />
+      Topaz ACP Style v1.0&nbsp;&copy;&nbsp;2015&nbsp;by:&nbsp;<a href="http://vintagedaddyo.com/mybb/community" target="_blank"><b>Vintagedaddyo.</b></a>&nbsp;All Rights Reserved. <br />
+    </p>
+<!-- End Theme Copyright -->
+</body>
+</html>

@@ -1,0 +1,30 @@
+/*
+ * MyBB: Topaz - Admin CP
+ *
+ * Filename: Home CSS File
+ *
+ * Author: Vintagedaddyo
+ *
+ * Version: 1.8
+ * 
+ */
+
+#left_menu div.left_menu_box ul.online_admins li a {
+	background: url('images/icons/user.png') no-repeat 15px 4px;
+	padding-left: 37px;
+}
+
+#left_menu div.left_menu_box ul.online_admins li a:hover {
+	background: url('images/icons/user.png') no-repeat 15px 4px;
+	padding-left: 37px;
+}
+
+#left_menu div.left_menu_box ul.online_admins li.mobile_user a {
+	background: url('images/icons/mobile_user.gif') no-repeat 15px 4px;
+	padding-left: 37px;
+}
+
+#left_menu div.left_menu_box ul.online_admins li.mobile_user a:hover {
+	background: url('images/icons/mobile_user.gif') no-repeat 15px 4px;
+	padding-left: 37px;
+}
