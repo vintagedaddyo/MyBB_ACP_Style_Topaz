@@ -7,7 +7,7 @@
  *
  * Style Author: Vintagedaddyo
  *
- * V Site: http://community.mybb.com/user-6029.html
+ * V Site: https://github.com/vintagedaddyo/MyBB_ACP_Style_Topaz
  *
  * MyBB Version: 1.8.x
  *
