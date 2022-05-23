@@ -27,11 +27,15 @@ function smmd_info()
 {
 
     return array(
-        'name' => 'Simple Mode Must Die!',
-        'compatability' => '18*',
-        'version' => '1.1',
-        'author' => 'Wildcard & Vintagedaddyo',
-    );
+        'name'          => 'Simple Mode Must Die!',
+        'description'   => 'Disables or re-enables simple mode',
+        'website'       => 'https://github.com/vintagedaddyo',
+        'author'        => 'Wildcard & Vintagedaddyo',
+        'authorsite'    => 'https://github.com/vintagedaddyo',
+        'version'       => '1.1',
+        'compatibility' => '18*',
+        'codename'      => 'simplemustdie'
+    );    
     
 }
 
@@ -156,6 +160,9 @@ function smmd_admin_themes_begin()
 {
 
     global $db, $mybb;
+
+    // 167 / 179 sort warning
+    $enable_smmd = isset($enable_smmd) ? $enable_smmd : '';    
     
     if ($mybb->settings['enable_smmd'] == 1)
     {

@@ -33,10 +33,10 @@ class Page extends DefaultPage
 		$trail = "";
 		foreach($this->_breadcrumb_trail as $key => $crumb)
 		{
-			if($this->_breadcrumb_trail[$key+1])
+			if(isset($this->_breadcrumb_trail[$key+1]))
 			{
 				$trail .= "<a href=\"".$crumb['url']."\">".$crumb['name']."</a>";
-				if($this->_breadcrumb_trail[$key+2])
+				if(isset($this->_breadcrumb_trail[$key+2]))
 				{
 					$trail .= " &raquo; ";
 				}
@@ -86,6 +86,8 @@ class Page extends DefaultPage
 		echo "	<link rel=\"stylesheet\" href=\"styles/".$this->style."/main.css?ver=1813\" type=\"text/css\" />\n";
 		echo "	<link rel=\"stylesheet\" href=\"styles/".$this->style."/modal.css?ver=1813\" type=\"text/css\" />\n";
 
+        // Add CP Style Specific Favicon
+		echo " <link rel=\"Shortcut icon\" href=\"styles/".$this->style."/images/favicon.ico\">\n";		
 		// Load stylesheet for this module if it has one
 		if(file_exists(MYBB_ADMIN_DIR."styles/{$this->style}/{$this->active_module}.css"))
 		{
@@ -110,6 +112,18 @@ class Page extends DefaultPage
 				"	document.write('<style type=\"text/css\">.popup_button { display: inline; } .popup_menu { display: none; }<\/style>');\n".
                 "//]]>\n".
                 "</script>\n";
+
+        // ADD Progressbar
+        echo " <link rel=\"stylesheet\" href=\"styles/".$this->style."/inc/progbar/nprogress.css\"/>\n";
+        echo" <script type=\"text/javascript\" src=\"styles/".$this->style."/inc/progbar/nprogress.js\"></script>\n";
+
+        echo "<script>
+	        NProgress.configure({ showSpinner: false });
+		    $(document).ready(function() {
+			NProgress.start();
+			NProgress.done();
+		    }); 
+            </script>\n";                 
 
 		echo "	<script type=\"text/javascript\">
 //<![CDATA[
