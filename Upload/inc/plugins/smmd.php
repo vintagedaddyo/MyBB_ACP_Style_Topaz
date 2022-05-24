@@ -86,7 +86,7 @@ function smmd_is_installed() {
 
   global $mybb; 
 
-  if(isset($mybb->settings['enable_smmd'])) 
+   if(isset($mybb->settings['enable_smmd']))
    { 
    
     return true; 
@@ -94,6 +94,7 @@ function smmd_is_installed() {
    } 
    
     return false;
+
 }
 
 /**
@@ -159,12 +160,19 @@ function smmd_uninstall()
 function smmd_admin_themes_begin()
 {
 
-    global $db, $mybb;
-
-    // 167 / 179 sort warning
-    $enable_smmd = isset($enable_smmd) ? $enable_smmd : '';    
+    global $db, $mybb; 
     
-    if ($mybb->settings['enable_smmd'] == 1)
+    // if empty
+    if (empty($mybb->settings['enable_smmd']))     
+    { 
+       
+       // is null
+       $mybb->settings['enable_smmd'] = null;
+
+    }
+
+    // @ 
+    if ($mybb->settings['enable_smmd'] == 1)     
     {
         
       if ($mybb->input['action'] == "edit_stylesheet" && (!isset($mybb->input['mode']) || $mybb->input['mode'] == "simple"))
@@ -176,6 +184,7 @@ function smmd_admin_themes_begin()
       
     }
 
+    // @
     if ($mybb->settings['enable_smmd'] == 0)
     {
         
